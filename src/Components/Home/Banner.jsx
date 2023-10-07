@@ -1,6 +1,7 @@
 import React from 'react'
 import BgImage from '../../../public/Images/full-shot-gamer-sitting-chair.jpg'
 import Marquee from "react-fast-marquee";
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -11,27 +12,15 @@ const Banner = () => {
             }}>
 
             <div className='container mx-auto flex justify-center flex-col h-screen items-center space-y-10 lg:mt-20'>
-                <h1 className='text-5xl text-center md:text-7xl font-bolder text-yellow-500'>Tech and Gaming Events</h1>
+                <Marquee>
+                    <h1 className='text-5xl h-24 text-center md:text-7xl font-bolder text-yellow-500'>Tech and Gaming Events</h1>
+                </Marquee>
                 <p className='text-white font-medium text-xl text-center md:max-w-[750px]'>At <span className='text-yellow-500 font-bold'>AlgoWebBot</span>, we are passionate about creating unforgettable moments in the world of technology and gaming. Whether you're an avid gamer, a tech enthusiast, or a visionary developer, we've got something extraordinary for you.</p>
 
-                <Marquee>
-                    <div className="carousel carousel-end rounded-box space-x-20 hidden lg:flex">
-                        <div className="carousel-item bg-yellow-500 p-2 rounded-lg relative cursor-pointer">
-                            <img src="/public/Images/311820-P8PQDL-893.jpg" alt="Drink" className='w-72 h-80 rounded-lg' />
-                            <h1 className="text-xl font-bold text-center absolute bottom-5 pl-2 text-white left-2">Hackathon</h1>
-                        </div>
-                        <div className="carousel-item bg-yellow-500 p-2 rounded-lg relative cursor-pointer">
-                            <img src="/public/Images/ralston-smith-zc9pWsPZd4Y-unsplash.jpg" alt="Drink" className='w-72 h-80 rounded-lg' />
-                            <h1 className="text-xl font-bold text-center absolute bottom-5 pl-2 text-white left-2">Conference</h1>
-                        </div>
-                        <div className="carousel-item bg-yellow-500 p-2 rounded-lg relative cursor-pointer">
-                            <img src="/public/Images/150Z_2208.w017.n001.10A.p18.10.jpg" alt="Drink" className='w-72 h-80 rounded-lg' />
-                            <h1 className="text-xl font-bold text-center absolute bottom-5 pl-2 text-black left-2">E-Gaming</h1>
-                        </div>
-                    </div>
-                </Marquee>
                 <div className='pb-5'>
-                    <button className='btn bg-yellow-500 capitalize px-8'>Call Us Now</button>
+                    <Link to='/contact'>
+                        <button className='btn bg-yellow-500 cursor-pointer capitalize px-8'>Call Us Now</button>
+                    </Link>
                 </div>
             </div>
         </div>

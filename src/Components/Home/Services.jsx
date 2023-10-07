@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLoaderData } from 'react-router-dom'
 import Service from './Service';
-import ParallaxImage from '../../../public/Images/josh-calabrese-Ev1XqeVL2wI-unsplash.jpg'
+import ParallaxImage from '../../../public/Images/cool-background2.png'
 
 const Services = () => {
 

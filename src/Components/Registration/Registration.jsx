@@ -1,19 +1,45 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineGoogle } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { MyAuthContext } from '../Context/AuthContext';
 
 const Registration = () => {
 
+    const { createUser, googleLogin } = useContext(MyAuthContext);
+    const navigate = useNavigate();
+
     const handleRegistration = (e) => {
-        
+        e.preventDefault();
+        const userName = e.target.username.value;
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        const confirmPassword = e.target.confirmPassword.value;
+
+        if (password !== confirmPassword) {
+            return setError("Password didn't match");
+        }
+        createUser(email, password).then(res => {
+            const user = res.user;
+            console.log(user);
+            e.target.reset();
+            // {
+            //     location?.state ? navigate(location.state) : navigate('/');
+            // }
+
+        }).then(err => {
+            console.log(err);
+        })
+    }
+    const createAccountWithGoogle = () => {
+        googleLogin().then(res => console.log(res.user)).catch(err => console.log(err));
     }
 
   return (
       <div className='container mx-auto h-[760px] pt-10'>
           <div className='w-full mb-6 flex justify-center items-center'>
               <form onSubmit={handleRegistration}>
-                  <div className=' w-[650px] bg-base-100 rounded-lg p-8 space-y-6 border-2'>
+                  <div className=' w-full md:w-[650px] bg-base-100 rounded-lg p-8 space-y-6 border-2'>
                       <h1 className="text-3xl font-bold mb-12 text-center">Create an account</h1>
                       <div className="relative h-11 w-full min-w-[200px]">
                           <input name='username' required type='text'
@@ -77,7 +103,7 @@ const Registration = () => {
                   <AiFillGithub className='absolute left-2 text-3xl top-2' />
                   <button className='text-center cursor-pointer font-medium text-lg input input-bordered rounded-full w-96'>Continue with Github</button>
               </div>
-              <div className='text-center mt-4 relative w-96 cursor-pointer'>
+              <div onClick={createAccountWithGoogle} className='text-center mt-4 relative w-96 cursor-pointer'>
                   <AiOutlineGoogle className='absolute left-2 top-2 text-3xl' />
                   <button className='text-center cursor-pointer font-medium text-lg input input-bordered rounded-full w-96'>Continue with Google</button>
               </div>

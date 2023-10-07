@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { MyAuthContext } from '../Context/AuthContext'
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(MyAuthContext);
+
+    const logOutUser = () => {
+        logOut().then(res => alert('Log Out')).catch(err=> console.log(err))
+    }
+
     return (
         <div className="navbar container mx-auto py-8">
             <div className="navbar-start">
@@ -103,10 +111,33 @@ const Navbar = () => {
                     </li>
                 </ul>
             </div>
-            <div className="navbar-end">
-                <Link to='/login'>
-                    <button className="btn text-[#088395] fon font-extrabold">Login</button>
-                </Link>
+            <div className="navbar-end space-x-5">
+                <div className="dropdown dropdown-end">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                        <div className="w-10 rounded-full">
+                            <img src={user?.photoURL} />
+                        </div>
+                    </label>
+                    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a className="justify-between">
+                                Profile
+                                <span className="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+                {
+                    user ? 
+                        <Link>
+                            <button onClick={logOutUser} className="btn text-[#088395] fon font-extrabold">Logout</button>
+                        </Link>:
+                        <Link to='/login'>
+                            <button className="btn text-[#088395] fon font-extrabold">Login</button>
+                        </Link>
+                }
             </div>
         </div>
     )
