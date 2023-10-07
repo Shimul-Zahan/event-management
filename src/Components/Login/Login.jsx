@@ -1,12 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineGoogle } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { MyAuthContext } from '../Context/AuthContext';
 
 const Login = () => {
 
+    const { loginWithPassword, googleLogin } = useContext(MyAuthContext);
+    const location = useLocation();
+    const navigate = useNavigate();
+
     const handleLogin = (e) => {
-        
+        e.preventDefault();
+        const email = e.target.email.value;
+        const password = e.target.password.value;
+        loginWithPassword(email, password)
+            .then(res => {
+                e.target.reset();
+                {
+                    location?.state ? navigate(location.state) : navigate('/');
+                }
+            })
+            .catch(err => console.log(err))
+    }
+    const LogInByGoogle = () => {
+        googleLogin().then(res => console.log(res.user)).catch(err => console.log(err));
     }
 
   return (
@@ -64,7 +82,7 @@ const Login = () => {
                   <AiFillGithub className='absolute left-2 text-3xl top-2' />
                   <button className='text-center cursor-pointer font-medium text-lg input input-bordered rounded-full w-96'>Continue with Github</button>
               </div>
-              <div className='text-center mt-4 relative w-96 cursor-pointer'>
+              <div onClick={LogInByGoogle} className='text-center mt-4 relative w-96 cursor-pointer'>
                   <AiOutlineGoogle className='absolute left-2 top-2 text-3xl' />
                   <button className='text-center cursor-pointer font-medium text-lg input input-bordered rounded-full w-96'>Continue with Google</button>
               </div>

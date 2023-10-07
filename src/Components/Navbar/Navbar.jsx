@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { MyAuthContext } from '../Context/AuthContext'
+import './style.css'
 
 const Navbar = () => {
 
@@ -14,7 +15,7 @@ const Navbar = () => {
         <div className="navbar container mx-auto py-8">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <label tabIndex={0} className="btn btn-ghost text-yellow-500 lg:hidden">
+                    <label tabIndex={0} className="btn text-yellow-500 lg:hidden">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-5 w-5"
@@ -32,80 +33,47 @@ const Navbar = () => {
                     </label>
                     <ul
                         tabIndex={0}
-                        className=" menu-sm dropdown-content mt-3  z-[1] p-2 shadow  rounded-box w-52"
+                        className=" menu-sm dropdown-content mt-3  z-[1] p-2 rounded-box w-52"
                     >
                         <li className="text-lg font-bold ">
                             <NavLink
-                                to="/"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "bg-green-500" : ""
-                                }
-                            >
-                                Home
+                                to="/">Home
                             </NavLink>
                         </li>
 
                         <li className="text-lg font-bold ">
                             <NavLink
-                                to="/about"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "bg-green-500" : ""
-                                }
-                            >
-                                About
+                                to="/about"> About
                             </NavLink>
                         </li>
 
                         <li className="text-lg font-bold">
                             <NavLink
-                                to="/contact"
-                                className={({ isActive, isPending }) =>
-                                    isPending ? "pending" : isActive ? "bg-green-500" : ""
-                                }
-                            >
-                                Profile
+                                to="/contact">Profile
                             </NavLink>
                         </li>
                     </ul>
                 </div>
-                <Link to={"/"}>  <a className="btn btn-ghost font-bold normal-case text-3xl text-yellow-500">
-                    Social <span className="text-2xl text-[#088395]">Events</span>
-                </a></Link>
+                <Link to={"/"} className=" font-bold normal-case text-3xl text-yellow-500">
+                    Social <span className="text-2xl text-yellow-500">Events</span>
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu  menu-horizontal px-1 text-yellow-500">
                     <li className="text-lg font-bold mr-5">
                         {" "}
-                        <NavLink
-                            to="/"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "bg-green-500" : ""
-                            }
-                        >
-                            Home
+                        <NavLink to="/">Home
                         </NavLink>
                     </li>
 
                     <li className="text-lg font-bold mr-5">
                         {" "}
-                        <NavLink
-                            to="/about"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "bg-green-500 " : ""
-                            }
-                        >
-                            About
-                        </NavLink>
+                        <NavLink to="/about">About</NavLink>
                     </li>
 
                     <li className="text-lg font-bold">
                         {" "}
-                        <NavLink
-                            to="/contact"
-                            className={({ isActive, isPending }) =>
-                                isPending ? "pending" : isActive ? "bg-green-500" : ""
-                            }
-                        >
+                        <NavLink to="/contact">
                             Contact
                         </NavLink>
                     </li>
@@ -113,7 +81,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-end space-x-5">
                 <div className="dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                    <label tabIndex={0} className="btn btn-yellow-500 btn-circle avatar">
                         <div className="w-10 rounded-full">
                             <img src={user?.photoURL} />
                         </div>
@@ -132,10 +100,10 @@ const Navbar = () => {
                 {
                     user ? 
                         <Link>
-                            <button onClick={logOutUser} className="btn text-[#088395] fon font-extrabold">Logout</button>
+                            <button onClick={logOutUser} className="btn text-yellow-500 fon font-extrabold">Logout</button>
                         </Link>:
                         <Link to='/login'>
-                            <button className="btn text-[#088395] fon font-extrabold">Login</button>
+                            <button className="btn text-yellow-500 fon font-extrabold">Login</button>
                         </Link>
                 }
             </div>

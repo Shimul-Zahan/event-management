@@ -48,7 +48,8 @@ const AuthContext = ({ children }) => {
         createUser,
         loginWithPassword,
         gitHubLogin,
-        logOut
+        logOut,
+        loading
     }
 
     return (

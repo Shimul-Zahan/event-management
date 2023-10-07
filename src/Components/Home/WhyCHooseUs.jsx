@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const WhyCHooseUs = () => {
     return (
-        <div className='py-20'>
+        <div className='mb-10'>
             <h1 className='text-7xl text-center font-bold mb-20'>Why Choose Us</h1>
             <Marquee>
                 <div className="carousel carousel-end rounded-box space-x-20 lg:flex">

@@ -4,28 +4,27 @@ import { Link } from 'react-router-dom';
 
 const Service = ({ service }) => {
 
-    const { id, image, title, description, quality } = service;
+    const { id, image, title, description, quality, price } = service;
 
     return (
-        <div className='w-96 lg:w-[450px] relative'>
-            <div className="card w-96 lg:w-[450px] bg-base-100 shadow-xl border-2 lg:h-[570px]">
+        <div className='w-96 md:w-80 lg:w-[450px] relative'>
+            <div className="card w-96 md:w-80 lg:w-[450px] lg:h-[500px]">
                 <div className='relative'>
                     <figure>
-                        <img src={image} alt="image" className='w-full h-80' />
+                        <img src={image} alt="image" className='w-full h-80 rounded-tr-xl rounded-tl-xl' />
                     </figure>
-                    <h1 className='text-xl font-bold bg-yellow-500 bg-opacity-60 bg-blend-overlay py-2 text-center absolute bottom-0 w-full'>{quality}</h1>
+                    <h1 className='text-xl border-2 font-bold bg-opacity-60 bg-blend-overlay py-2 absolute top-2 left-2 px-2 text-yellow-500 rounded-lg shadow-xl'>{quality}</h1>
+                    <Link to={`/event-details/${id}`} className='absolute bottom-0 px-5 py-3 right-0 bg-yellow-500 rounded-tl-3xl transition-all duration-[250ms] ease-out hover:bg-green-400'>
+                        <BsArrowRight className='text-5xl font-bold' />
+                    </Link>
                 </div>
                 <div className="space-y-4 px-2 mb-2">
-                    <h2 className="text-2xl font-bold mt-4">{title}</h2>
-                    <p className='text-lg font-medium'>{description}</p>
+                    <div className='flex justify-between gap-2'>
+                        <h2 className="text-xl font-bold text-yellow-500 mt-4">{title}</h2>
+                        <h2 className="text-xl font-bold mt-4">${price}</h2>
+                    </div>
+                    <p className='text-base font-medium'>{description}</p>
                 </div>
-            </div>
-            <div className=' absolute bottom-0 w-full opacity-0 hover:opacity-80 hover:transition-all'>
-                <Link to={`/event-details/${id}`}>
-                    <button className='btn w-full h-16 bg-yellow-500'>
-                        <BsArrowRight className='text-5xl font-bold' />
-                    </button>
-                </Link>
             </div>
         </div>
     )

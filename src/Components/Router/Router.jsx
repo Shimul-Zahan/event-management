@@ -7,6 +7,9 @@ import Home from '../Home/Home';
 import EventDetails from '../EventDetails/EventDetails';
 import Login from '../Login/Login';
 import Registration from '../Registration/Registration';
+import PrivateRoute from '../Private/PrivateRoute';
+import Contact from '../Contact/Contact';
+import About from '../About/About';
 
 const Router = createBrowserRouter([
     {
@@ -20,11 +23,11 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <h1>About Page</h1>
+                element: <About />
             },
             {
                 path: '/contact',
-                element: <h1>Contact Page</h1>
+                element: <Contact />
             },
             {
                 path: '/login',
@@ -36,7 +39,7 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/event-details/:id',
-                element: <EventDetails />,
+                element: <PrivateRoute><EventDetails /></PrivateRoute>,
                 loader: () => fetch('/data/services.json')
             },
         ]

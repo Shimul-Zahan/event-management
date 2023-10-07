@@ -1,13 +1,14 @@
 import React, { useContext } from 'react'
 import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineGoogle } from 'react-icons/ai';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MyAuthContext } from '../Context/AuthContext';
 
 const Registration = () => {
 
     const { createUser, googleLogin } = useContext(MyAuthContext);
     const navigate = useNavigate();
+    const loaction = useLocation();
 
     const handleRegistration = (e) => {
         e.preventDefault();
@@ -23,9 +24,9 @@ const Registration = () => {
             const user = res.user;
             console.log(user);
             e.target.reset();
-            // {
-            //     location?.state ? navigate(location.state) : navigate('/');
-            // }
+            {
+                location?.state ? navigate(location.state) : navigate('/');
+            }
 
         }).then(err => {
             console.log(err);
