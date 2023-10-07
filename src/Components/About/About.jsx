@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import ParallaxImage from '../../../public/Images/Screenshot 2023-10-08 022536.png'
 import { useLoaderData } from 'react-router-dom'
 // 
@@ -7,6 +7,15 @@ import { useLoaderData } from 'react-router-dom'
 const About = () => {
     
     const employees = useLoaderData();
+    const [feedback, setFeedback] = useState([]);
+
+    useEffect(() => {
+        fetch('/data/feedback.json')
+            .then(res => res.json())
+        .then(data=> setFeedback(data))
+    }, [])
+
+    console.log(feedback)
 
     return (
         <div>
@@ -57,6 +66,46 @@ const About = () => {
                             className='w-full lg:w-[500px]' />
                         <h1 className='text-xl font-bol border-2 text-white bg-black bg-blend-overlay bg-opacity-50 absolute p-4 top-0 left-0'>01 days : 05 hours : 13 mins left</h1>
                         <h1 className='text-xl font-bold mt-2'>Gaming Conventions and Tournaments</h1>
+                    </div>
+                </div>
+            </div>
+
+            {/*   */}
+
+            <h1 className='text-5xl font-bold text-center my-20'>Customer Testimonial</h1>
+            <div className='flex justify-center items-center mb-20'>
+                <div className='grid grid-cols-1 md:grid-cols-2 md:gap-16 space-y-5'>
+                    {
+                        feedback.map(message => <div className='max-w-[550px] text-center space-y-2'>
+                            <svg class="h-12 mx-auto text-gray-400 dark:text-gray-600" viewBox="0 0 24 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z" fill="currentColor" />
+                            </svg>
+                            <p className='text-lg font-thin max-w-[550px] text-center'>{message?.testimonial}</p>
+                            <div className='flex justify-center items-center gap-4'>
+                                <h1 className='w-12 h-12 rounded-full bg-gray-400 flex justify-center items-center'>IMG</h1>
+                                <div className='text-left'>
+                                    <h1 className='text-lg font-bold'>{message?.name}</h1>
+                                    <h1 className='text-base font-thin'>{message?.position}</h1>
+                                </div>
+                            </div>
+                        </div>)
+                    }
+                </div>
+            </div>
+            <h1 className='text-5xl font-bold text-center mt-20 mb-10'>Our Achivements</h1>
+            <div className='flex justify-center items-center'>
+                <div className='grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-24'>
+                    <div className='flex flex-col justify-center items-center mb-20'>
+                        <img src="../../../public/Images/best-seller-158885_640.png" className='h-72 w-80' />
+                        <h1 className='text-2xl font-bold mt-4'>Best Seller</h1>
+                    </div>
+                    <div className='flex flex-col justify-center items-center mb-20'>
+                        <img src="/Images/trusted-stamp-3.png" className='h-72 w-80' />
+                        <h1 className='text-2xl font-bold mt-4'>Trusted</h1>
+                    </div>
+                    <div className='flex flex-col justify-center items-center mb-20'>
+                        <img src="../../../public/Images/Verification.jpg" className='h-72 w-80' />
+                        <h1 className='text-2xl font-bold mt-4'>Verified</h1>
                     </div>
                 </div>
             </div>

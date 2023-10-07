@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Innovative Event Concepts",
+        "description": "We lead the industry with groundbreaking event concepts, integrating cutting-edge technology to create immersive and unforgettable experiences.",
+        "image": "https://i.ibb.co/YBGZLr3/1429316.png"
+    },
+    {
+        "id": 2,
+        "title": "Proven Track Record",
+        "description": "Our track record speaks volumes. With a history of organizing highly successful events, we consistently deliver exceptional results, earning industry trust and recognition.",
+        "image": "https://i.ibb.co/m4DTM3X/download.png"
+    },
+    {
+        "id": 3,
+        "title": "Comprehensive Services",
+        "description": "From Tech Conferences and Gaming Conventions to VR/AR Experiences, our diverse range of services ensures that we meet and exceed the unique needs of every event.",
+        "image": "https://i.ibb.co/3f2RTvv/deserve.png"
+    },
+    {
+        "id": 4,
+        "title": "Client-Centric Approach",
+        "description": "Your goals are our priority. We collaborate closely, ensuring a client-centric approach that tailors event planning to your specific requirements, creating a seamless experience.",
+        "image": "https://i.ibb.co/7bn9TsQ/Client.png"
+    },
+    {
+        "id": 5,
+        "title": "Inclusive and Engaging Events",
+        "description": "Our commitment to inclusivity goes beyond entertainment. We create events that foster meaningful connections, networking opportunities, and community building.",
+        "image": "https://i.ibb.co/vkSKFrr/6-61619-inclusion-icon.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Strategic Partnerships and Collaborations",
+        "description": "Leveraging strategic partnerships with major tech and gaming companies, we bring a wealth of industry connections, resources, and support.",
+        "image": "https://i.ibb.co/GV4DYGc/Screenshot-2023-10-08-050603.png"
+    }
+]
