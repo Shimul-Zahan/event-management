@@ -1,0 +1,83 @@
+[
+    {
+        "id": 1,
+        "title": "Event Planning and Coordination",
+        "description": "Comprehensive event planning services, including logistics, venue selection, and timeline management.",
+        "long_description": "At [Your Event Management Company], our Event Planning and Coordination services are designed to transform your event dreams into a stunning reality. We understand that each event is unique, and our seasoned team of planners is committed to orchestrating every detail flawlessly. [Long description continues...]",
+        "price": 8000,
+        "quality": "Premium",
+        "image": "https://i.ibb.co/2YgmcwB/towfiqu-barbhuiya-bw-OAix-LG0uc-unsplash.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Tech Conferences and Expos",
+        "description": "Organize and manage technology conferences and expos, bringing together industry experts, thought leaders, and enthusiasts.",
+        "long_description": "Immerse yourself in the dynamic world of technology with our Tech Conferences and Expos. Designed for industry professionals, thought leaders, and tech enthusiasts, these events offer a unique opportunity to explore the latest trends, innovations, and breakthroughs in the tech realm. [Long description continues...]",
+        "price": 10000,
+        "quality": "High",
+        "image": "https://i.ibb.co/jrhcHVM/alex-knight-2-EJCSULRw-C8-unsplash.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Gaming Conventions and Tournaments",
+        "description": "Plan and execute gaming conventions, tournaments, and e-sports events for both casual gamers and professionals.",
+        "long_description": "Step into the world of gaming excitement with our Gaming Conventions and Tournaments. Whether you're a casual gamer or an aspiring e-sports professional, our events provide thrilling competitions, exclusive game releases, and an unforgettable gaming experience. [Long description continues...]",
+        "price": 12000,
+        "quality": "Premium",
+        "image": "https://i.ibb.co/d5P75mC/gaming-tournaments.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Hackathons and Coding Competitions",
+        "description": "Coordinate hackathons and coding competitions, providing a platform for developers to showcase their skills and collaborate on innovative projects.",
+        "long_description": "Ignite your coding passion with our Hackathons and Coding Competitions. Engage with like-minded developers, solve real-world challenges, and showcase your coding prowess. Whether you're a seasoned coder or a beginner, our events offer a collaborative and innovative environment. [Long description continues...]",
+        "price": 9000,
+        "quality": "Intermediate",
+        "image": "https://i.ibb.co/XYjj9jk/Screenshot-2023-10-07-020859.png"
+    },
+    {
+        "id": 5,
+        "title": "Virtual Reality (VR) and Augmented Reality (AR) Experiences",
+        "description": "Integrate VR and AR technologies into events, offering immersive experiences and showcasing the latest advancements in these fields.",
+        "long_description": "Immerse yourself in a new reality with our Virtual Reality (VR) and Augmented Reality (AR) Experiences. From cutting-edge demos to interactive exhibits, our events push the boundaries of technology, providing attendees with unforgettable experiences. [Long description continues...]",
+        "price": 15000,
+        "quality": "Premium",
+        "image": "https://i.ibb.co/Z6CKYr2/Creative-Technology-girl-wearing-VR-Goggles.png"
+    },
+    {
+        "id": 6,
+        "title": "Sponsorship Management",
+        "description": "Forge partnerships with tech and gaming companies for sponsorships, ensuring visibility and support for events.",
+        "long_description": "Elevate your event with strategic partnerships through our Sponsorship Management services. We connect your brand with leading tech and gaming companies, ensuring maximum visibility and support for your events. [Long description continues...]",
+        "price": 5000,
+        "quality": "Basic",
+        "image": "https://i.ibb.co/jwVnks2/software-training-workshops.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Workshops and Training Sessions",
+        "description": "Organize hands-on workshops and training sessions, covering topics such as game development, coding, and emerging technologies.",
+        "long_description": "Deepen your skills and knowledge with our Workshops and Training Sessions. Led by industry experts, these hands-on sessions cover a range of topics, including game development, coding, and emerging technologies. [Long description continues...]",
+        "price": 7000,
+        "quality": "High",
+        "image": "https://i.ibb.co/bv6SGQ8/headway-F2-KRf-Qf-Cqw-unsplash.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Networking Events and Mixers",
+        "description": "Facilitate networking opportunities for professionals, enthusiasts, and industry leaders to connect and collaborate.",
+        "long_description": "Forge valuable connections in the tech and gaming industries with our Networking Events and Mixers. Whether you're a seasoned professional or an aspiring enthusiast, these events provide the perfect platform to connect, collaborate, and build lasting relationships. [Long description continues...]",
+        "price": 6000,
+        "quality": "Intermediate",
+        "image": "https://i.ibb.co/nfRwFxB/mixer1.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Post-Event Analysis and Reporting",
+        "description": "Conduct post-event analysis, gather feedback, and generate reports to evaluate the success of events and identify areas for improvement.",
+        "long_description": "Ensure the continuous improvement of your events with our Post-Event Analysis and Reporting services. We meticulously gather feedback, conduct thorough analyses, and generate comprehensive reports to evaluate the success of your events and identify areas for enhancement. [Long description continues...]",
+        "price": 3000,
+        "quality": "Basic",
+        "image": "https://i.ibb.co/TLczR8h/Post-Event-ROI.jpg"
+    }
+]
