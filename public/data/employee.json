@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "position": "CEO",
+        "experience": "12 years",
+        "image": "https://i.ibb.co/yVbtzgT/010t010.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Alex Johnson",
+        "position": "Event Manager",
+        "experience": "8 years",
+        "image": "https://i.ibb.co/C5LbbnL/ac2bacd8-ae22-4172-9412-0f8856bdd19c.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Emily Chen",
+        "position": "Tech Conference Coordinator",
+        "experience": "5 years",
+        "image": "https://i.ibb.co/FHYT8ch/istockphoto-1154642632-612x612.jpg",
+        "gender": "female"
+    },
+    {
+        "id": 4,
+        "name": "Daniel Rodriguez",
+        "position": "Gaming Events Specialist",
+        "experience": "7 years",
+        "image": "https://i.ibb.co/GvYDj2Q/HKstrategies-1029-1024x683.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Mia Patel",
+        "position": "VR/AR Experiences Developer",
+        "experience": "4 years",
+        "image": "https://i.ibb.co/HCmC0wD/images.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Jordan Smith",
+        "position": "Sponsorship Manager",
+        "experience": "6 years",
+        "image": "https://i.ibb.co/HdSTDrS/pexels-pixabay-220453.jpg"
+    }
+]
