@@ -18,12 +18,12 @@ const Service = ({ service }) => {
                         <BsArrowRight className='text-5xl font-bold' />
                     </Link>
                 </div>
-                <div className="space-y-4 px-2 mb-2">
+                <div className="space-y-2 lg:space-y-4 px-2 mb-2">
                     <div className='flex justify-between gap-2'>
-                        <h2 className="text-xl font-bold mt-4">{title}</h2>
-                        <h2 className="text-xl font-bold mt-4">${price}</h2>
+                        <h2 className="text-lg lg:text-xl font-bold mt-4">{title}</h2>
+                        <h2 className="text-lg lg:text-xl font-bold mt-4">${price}</h2>
                     </div>
-                    <p className='text-lg font-base'>{description}</p>
+                    <p className='text-small font-thin lg:text-lg font-base'>{description}</p>
                 </div>
             </div>
         </div>

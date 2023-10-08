@@ -6,6 +6,8 @@ import { MyAuthContext } from '../Context/AuthContext';
 import { updateProfile } from 'firebase/auth';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+// FcManager
+
 
 const Registration = () => {
 
@@ -65,7 +67,7 @@ const Registration = () => {
     }
 
     return (
-        <div className='container mx-auto h-[760px] pt-10'>
+        <div className='container mx-auto h-[760px] pt-10 mb-20'>
             <div className='w-full mb-6 flex justify-center items-center'>
                 <form onSubmit={handleRegistration}>
                     <div className=' w-full md:w-[650px] bg-base-100 rounded-lg p-8 space-y-6 border-2'>
