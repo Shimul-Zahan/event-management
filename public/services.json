@@ -39,7 +39,8 @@
             "Thrilling E-sports Competitions",
             "Exclusive Game Releases and Previews",
             "Immersive Gaming Experiences"
-        ]
+        ],
+        "discount": 11
     },
     {
         "id": 4,
@@ -67,7 +68,8 @@
             "Immersive Engagement",
             "Showcasing Technological Advancements",
             "Educational and Informative Experiences"
-        ]
+        ],
+        "discount" : 13
     },
     {
         "id": 6,
@@ -95,7 +97,8 @@
             "Hands-On Learning Opportunities",
             "Industry Expert-Led Sessions",
             "Tailored Content and Skill Development"
-        ]
+        ],
+        "discount":"7"
     },
     {
         "id": 8,
@@ -123,6 +126,7 @@
             "Comprehensive Evaluation of Event Success",
             "Gathering Feedback for Improvement",
             "Data-Driven Insights and Reporting"
-        ]
+        ],
+        "discount": 17
     }
 ]

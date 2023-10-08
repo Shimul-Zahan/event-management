@@ -28,7 +28,7 @@ const EventDetails = () => {
                                             <img src={item?.image} alt="image" className='w-full h-80 rounded-tr-xl rounded-tl-xl' />
                                         </figure>
                                         <h1 className='text-xl border-2 font-bold bg-opacity-60 bg-blend-overlay py-2 absolute top-2 left-2 px-2 text-yellow-500 rounded-lg shadow-xl'>{item?.quality}</h1>
-                                        <Link to={`/event-details/${item?.id}`} className='absolute bottom-0 px-5 py-3 right-0 bg-yellow-500 rounded-tl-3xl transition-all duration-[250ms] ease-out hover:bg-green-400'>
+                                        <Link to={`/event-details/${item?.id}`} className='absolute bottom-0 px-3 py-2 right-0 bg-gradient-to-r from-[#FFD700] via-[#FFA500] to-orange-500 rounded-tl-2xl transition-all duration-[250ms] '>
                                             <BsArrowRight className='text-5xl font-bold' />
                                         </Link>
                                     </div>
