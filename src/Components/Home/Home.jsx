@@ -3,6 +3,7 @@ import Banner from './Banner'
 import Services from './Services'
 import WhyCHooseUs from './WhyCHooseUs'
 import FactsFigures from './FactsFigures/FactsFigures'
+import Caurosel from './Caurosel/Caurosel'
 
 const Home = () => {
     return (
@@ -13,7 +14,8 @@ const Home = () => {
                 <Services />
             </div>
             <WhyCHooseUs />
-            <FactsFigures/>
+            <FactsFigures />
+            {/* <Caurosel /> */}
         </div>
     )
 }

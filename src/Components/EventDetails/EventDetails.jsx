@@ -9,17 +9,43 @@ const EventDetails = () => {
     const { id } = useParams();
     const clickeEvent = services.find(service => service.id == id);
     const samePackages = services.filter(service => service.quality == clickeEvent.quality)
-    console.log(samePackages)
-    // absolute bottom - 0 
 
     return (
-        <div className='min-h-[760px] container mx-auto grid grid-cols-1 lg:grid-cols-3 mb-20 gap-10'>
+        <div className='min-h-[760px] container mx-auto flex flex-col-reverse justify-center items-center px-2 md:items-start md:grid md:grid-cols-2 lg:grid-cols-3 mb-20 gap-10'>
             <div className=' col-span-2'>
                 <div className='relative'>
                     <img src={clickeEvent?.image} alt="" className='lg:h-[600px] w-full' />
                 </div>
                 <p className='text-xl mt-5 font-medium'>{clickeEvent?.long_description}</p>
+                <div>
+                    <div className='mt-10'>
+                        <h1 className='text-xl font-bold mb-3'>Your Same Packages</h1>
+                        <div className='flex flex-col md:flex-col lg:flex-row justify-start gap-20'>
+                            {
+                                samePackages?.map(item => <div className="card w-96 md:w-80 lg:w-[450px] lg:h-[500px]">
+                                    <div className='relative'>
+                                        <figure>
+                                            <img src={item?.image} alt="image" className='w-full h-80 rounded-tr-xl rounded-tl-xl' />
+                                        </figure>
+                                        <h1 className='text-xl border-2 font-bold bg-opacity-60 bg-blend-overlay py-2 absolute top-2 left-2 px-2 text-yellow-500 rounded-lg shadow-xl'>{item?.quality}</h1>
+                                        <Link to={`/event-details/${item?.id}`} className='absolute bottom-0 px-5 py-3 right-0 bg-yellow-500 rounded-tl-3xl transition-all duration-[250ms] ease-out hover:bg-green-400'>
+                                            <BsArrowRight className='text-5xl font-bold' />
+                                        </Link>
+                                    </div>
+                                    <div className="space-y-4 px-2 mb-2">
+                                        <div className='flex justify-between gap-2'>
+                                            <h2 className="text-xl font-thin mt-4">{item?.title}</h2>
+                                            <h2 className="text-xl font-thin mt-4">${item?.price}</h2>
+                                        </div>
+                                        {/* <p className='text-base font-medium'>{item?.description}</p> */}
+                                    </div>
+                                </div>)
+                            }
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div className='bg-base-100'>
                 <div>
                     <div className='flex justify-between mb-10'>
@@ -36,36 +62,15 @@ const EventDetails = () => {
                 </div>
                 <div className='flex justify-center items-center mt-5 gap-10'>
                     <Link to='/'>
-                        <button className='btn btn-outline bg-yellow-500 px-10'>
+                        <button className='btn btn-outline bg-yellow-500 px-5'>
                             <span className='text-2xl'><BsArrowLeft /></span>
                             Back to Home</button>
                     </Link>
                     <Link to='/contact'>
-                        <button className='btn btn-outline bg-yellow-500 px-10'>
+                        <button className='btn btn-outline bg-yellow-500 px-5'>
                             <span className='text-2xl'><BiPhoneCall /></span>
                             Call us now</button>
                     </Link>
-                </div>
-                <div className='mt-10'>
-                    <h1 className='text-xl font-bold mb-3'>Your Same Packages</h1>
-                    <div className="card w-96 md:w-80 lg:w-[450px] lg:h-[500px]">
-                        <div className='relative'>
-                            <figure>
-                                <img src={samePackages[1]?.image} alt="image" className='w-full h-80 rounded-tr-xl rounded-tl-xl' />
-                            </figure>
-                            <h1 className='text-xl border-2 font-bold bg-opacity-60 bg-blend-overlay py-2 absolute top-2 left-2 px-2 text-yellow-500 rounded-lg shadow-xl'>{samePackages[1]?.quality}</h1>
-                            <Link to={`/event-details/${samePackages[1]?.id}`} className='absolute bottom-0 px-5 py-3 right-0 bg-yellow-500 rounded-tl-3xl transition-all duration-[250ms] ease-out hover:bg-green-400'>
-                                <BsArrowRight className='text-5xl font-bold' />
-                            </Link>
-                        </div>
-                        <div className="space-y-4 px-2 mb-2">
-                            <div className='flex justify-between gap-2'>
-                                <h2 className="text-xl font-bold text-yellow-500 mt-4">{samePackages[1]?.title}</h2>
-                                <h2 className="text-xl font-bold mt-4">${samePackages[1]?.price}</h2>
-                            </div>
-                            <p className='text-base font-medium'>{samePackages[1]?.description}</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

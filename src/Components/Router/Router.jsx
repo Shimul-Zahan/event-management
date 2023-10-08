@@ -10,11 +10,13 @@ import Registration from '../Registration/Registration';
 import PrivateRoute from '../Private/PrivateRoute';
 import Contact from '../Contact/Contact';
 import About from '../About/About';
+import Error from '../Error/Error';
 
 const Router = createBrowserRouter([
     {
         path: '/',
         element: <Layout />,
+        errorElement: <Error />,
         children: [
             {
                 path: '/',
@@ -23,12 +25,12 @@ const Router = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <About />,
+                element: <PrivateRoute><About /></PrivateRoute>,
                 loader: () => fetch('/data/employee.json'),
             },
             {
                 path: '/contact',
-                element: <Contact />
+                element: <PrivateRoute><Contact /></PrivateRoute>
             },
             {
                 path: '/login',
