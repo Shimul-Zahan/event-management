@@ -12,14 +12,15 @@ const WhyCHooseUs = () => {
     }, [])
 
     return (
-        <div className='mb-10 container mx-auto'>
-            <h1 className='text-7xl text-center font-bold mb-20'>Why Choose Us</h1>
-            <div>
+        <div className='container mx-auto mb-20'>
+            <h1 className='text-5xl text-center font-bold mb-20'>Why Choose Us</h1>
+            <div className='grid grid-cols-1 lg:grid-cols-2 text-center lg:text-start'>
                 {
-                    choose?.map(item => <div>
-                        <img src={item.image} className='h-40 w-40 rounded-full'/>
+                    choose?.map((item, index) => <div className={`${index % 2 === 1 ? 'border-l-2' : ''} flex flex-col justify-center items-center gap-5 lg:flex-row lg:justify-start border-b-2 p-4`}>
+                        <img src={item?.image} className='h-36 w-36 rounded-full'/>
                         <div>
-                            <h1>{ item.title }</h1>
+                            <h1 className='text-2xl font-bold mb-2'>{item?.title}</h1>
+                            <p className='text-lg font-thin'>{item?.description.slice(0, 299) }</p>
                         </div>
                     </div>)
                 }
@@ -27,5 +28,6 @@ const WhyCHooseUs = () => {
         </div>
     )
 }
+// ${ index !== 5 ? 'border-b-2' : '' }
 
 export default WhyCHooseUs

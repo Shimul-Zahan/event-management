@@ -20,10 +20,10 @@ const Service = ({ service }) => {
                 </div>
                 <div className="space-y-4 px-2 mb-2">
                     <div className='flex justify-between gap-2'>
-                        <h2 className="text-xl font-bold text-yellow-500 mt-4">{title}</h2>
+                        <h2 className="text-xl font-bold mt-4">{title}</h2>
                         <h2 className="text-xl font-bold mt-4">${price}</h2>
                     </div>
-                    <p className='text-base font-medium'>{description}</p>
+                    <p className='text-lg font-base'>{description}</p>
                 </div>
             </div>
         </div>
