@@ -1,5 +1,4 @@
 a.active{
-    color: white;
-    background: rgb(250, 220, 28);
+    color: red;
     text-decoration: underline;
 }
