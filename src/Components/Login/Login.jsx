@@ -1,31 +1,48 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { AiFillGithub } from 'react-icons/ai';
 import { AiOutlineGoogle } from 'react-icons/ai';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { MyAuthContext } from '../Context/AuthContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
     const { loginWithPassword, googleLogin } = useContext(MyAuthContext);
     const location = useLocation();
     const navigate = useNavigate();
+    const [error, setError] = useState(null);
 
     const handleLogin = (e) => {
+        setError(null);
         e.preventDefault();
         const email = e.target.email.value;
         const password = e.target.password.value;
         loginWithPassword(email, password)
             .then(res => {
                 e.target.reset();
-                {
-                    location?.state ? navigate(location.state) : navigate('/');
-                }
+                toast.success('Successfully ', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    theme: "light",
+                })
+                // {
+                //     location?.state ? navigate(location.state) : navigate('/');
+                // }
             })
-            .catch(err => console.log(err))
+            .catch(err => setError(err.message.slice(10, 100)))
     }
     const LogInByGoogle = () => {
-        googleLogin().then(res => console.log(res.user)).catch(err => console.log(err));
+        googleLogin().then(res => 
+            toast.success('Successfully Login', {
+                position: "top-center",
+                autoClose: 5000,
+                theme: "light",
+            }))
+            .catch(err => setError(err.message.slice(10, 100)));
     }
+
+    // console.log(error)
 
   return (
       <div className='container mx-auto h-[760px] pt-20'>
@@ -52,6 +69,9 @@ const Login = () => {
                               <span className='text-lg'>Password</span>
                           </label>
                       </div>
+                      {
+                          error && <div className='text-red-500 text-sm font-thin'>{error}</div>
+                      }
                       <div className='flex justify-between items-center'>
                           <div className='space-y-2'>
                               <input type="checkbox" name='destination' placeholder="Your visiting place here..." className="" />
@@ -87,6 +107,7 @@ const Login = () => {
                   <button className='text-center cursor-pointer font-medium text-lg input input-bordered rounded-full w-96'>Continue with Google</button>
               </div>
           </div>
+          <ToastContainer />
       </div>
   )
 }
