@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import ParallaxImage from '../../../public/Images/Screenshot 2023-10-08 022536.png'
+import ParallaxImage from '/Images/Screenshot 2023-10-08 022536.png'
 import { useLoaderData } from 'react-router-dom'
 // 
 
@@ -18,17 +18,17 @@ const About = () => {
     console.log(feedback)
 
     return (
-        <div>
-            <div className='min-h-screen lg:-mt-[130px] bg-black bg-blend-overlay bg-fixed bg-opacity-90' style={{ backgroundImage: `url('${ParallaxImage}')`, backgroundSize: 'cover' }}>
-                <div className='flex flex-col justify-center items-center min-h-[800px] space-y-5'>
-                    <div className='text-5xl text-white font-bold'>About Us</div>
-                    <h1 className='text-3xl font-bold text-center text-yellow-500'>Our Motto: Unleashing Innovation and Gaming Excitement</h1>
-                    <p className='text-white text-lg font-light max-w-[950px] text-center'>Welcome to <strong className='text-yellow-500'>AlgoWebBot</strong>, where technology meets gaming in extraordinary experiences. As the CEO, I take pride in leading a team dedicated to curating unparalleled events. From cutting-edge Tech Conferences to heart-pounding Gaming Conventions, we redefine the intersection of innovation and excitement. Our vision goes beyond events; it's about building a community that thrives on shared passion and collaboration. Join us on this thrilling journey as we push the boundaries of technology and gaming, creating moments that resonate in the hearts of enthusiasts and industry leaders alike. Welcome to a future where every event is an adventure, and every gathering is a celebration of limitless possibilities.</p>
-                    <h1 className='text-xl text-yellow-500 font-bold text-center'>Eleush Zahan Shimul <br />CEO AlgoWebBot</h1>
+        <div className=''>
+            <div className='min-h-screen lg:-mt-[130px] -mt-[118px] bg-black bg-blend-overlay bg-fixed bg-opacity-90' style={{ backgroundImage: `url('${ParallaxImage}')`, backgroundSize: 'cover' }}>
+                <div className='flex flex-col justify-center items-center min-h-[950px] space-y-5 px-4'>
+                    <div className='text-2xl lg:text-5xl text-white font-bold'>About Us</div>
+                    <h1 className='text-xl lg:text-3xl font-bold text-center text-yellow-500'>Our Motto: Unleashing Innovation and Gaming Excitement</h1>
+                    <p className='text-white text-base lg:text-lg font-thin max-w-[950px] text-center'>Welcome to <strong className='text-yellow-500'>AlgoWebBot</strong>, where technology meets gaming in extraordinary experiences. As the CEO, I take pride in leading a team dedicated to curating unparalleled events. From cutting-edge Tech Conferences to heart-pounding Gaming Conventions, we redefine the intersection of innovation and excitement. Our vision goes beyond events; it's about building a community that thrives on shared passion and collaboration. Join us on this thrilling journey as we push the boundaries of technology and gaming, creating moments that resonate in the hearts of enthusiasts and industry leaders alike. Welcome to a future where every event is an adventure, and every gathering is a celebration of limitless possibilities.</p>
+                    <h1 className='text-lg lg:text-xl text-yellow-500 font-bold text-center'>Eleush Zahan Shimul <br />CEO AlgoWebBot</h1>
                 </div>
             </div>
             <div className='my-10 container mx-auto'>
-                <h1 className='text-5xl font-bold text-center mb-8'>Meet Out Team</h1>
+                <h1 className='text-5xl font-bold text-center my-20'>Meet Out Team</h1>
                 <div className='w-full flex justify-center items-center'>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10'>
                         {
@@ -44,8 +44,12 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <h1 className='text-5xl font-bold text-center my-20'>Upcooming Events</h1>
-            <div className='my-20 container mx-auto flex flex-col md:flex-row justify-center gap-10'>
+            <div className='my-32 flex flex-col justify-center items-center relative'>
+                <hr className='w-3/5 bg-black h-[3px]' />
+                <h1 className='text-5xl font-bold text-center absolute -top-7 bg-white px-4'>Upcooming Events</h1>
+            </div>
+            {/* <h1 className='text-5xl font-bold text-center my-20'>Upcooming Events</h1> */}
+            <div className='my-20 container mx-auto flex flex-col lg:flex-row justify-center gap-10 px-3'>
                 <div>
                     <div className='relative'>
                         <img src="/cardImage/Creative-Technology-girl-wearing-VR-Goggles.png"
@@ -72,8 +76,8 @@ const About = () => {
 
             {/*   */}
 
-            <h1 className='text-5xl font-bold text-center my-20'>Customer Testimonial</h1>
-            <div className='flex justify-center items-center mb-20'>
+            <h1 className='text-5xl font-bold text-center my-20'>Experts Testimonial</h1>
+            <div className='flex justify-center items-center mb-20 p-4'>
                 <div className='grid grid-cols-1 md:grid-cols-2 md:gap-16 space-y-5'>
                     {
                         feedback.map(message => <div className='max-w-[550px] text-center space-y-2'>
@@ -92,7 +96,11 @@ const About = () => {
                     }
                 </div>
             </div>
-            <h1 className='text-5xl font-bold text-center mt-20 mb-10'>Our Achivements</h1>
+            <div className='my-32 flex flex-col justify-center items-center relative'>
+                <hr className='w-3/5 bg-black h-[3px]' />
+                <h1 className='text-5xl font-bold text-center absolute -top-7 bg-white px-4'>Our Achivements</h1>
+            </div>
+            {/* <h1 className='text-5xl font-bold text-center mt-20 mb-10'>Our Achivements</h1> */}
             <div className='flex justify-center items-center'>
                 <div className='grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-24'>
                     <div className='flex flex-col justify-center items-center mb-20'>
