@@ -18,7 +18,7 @@ const FactsFigures = () => {
                 </div>
                 <div className='flex justify-center items-center flex-col space-y-4'>
                     <img src="/icon/pancake.png" className='h-28 w-28' />
-                    <p className=' text-3xl md:text-7xl font-thin text-gray-400'>016</p>
+                    <p className=' text-3xl md:text-7xl font-thin text-gray-400'>16</p>
                     <h1 className='ttext-xl md:ext-3xl font-thin text-gray-700'>Branch</h1>
                 </div>
                 <div className='flex justify-center items-center flex-col space-y-4'>

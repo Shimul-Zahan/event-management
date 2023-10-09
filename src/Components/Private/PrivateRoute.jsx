@@ -1,13 +1,20 @@
 import React, { useContext } from 'react'
 import { MyAuthContext } from '../Context/AuthContext'
-import { Navigate, useNavigate } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate } from 'react-router-dom';
 
 const PrivateRoute = ({ children }) => {
 
     const { user, loading } = useContext(MyAuthContext);
+    const location = useLocation();
 
     if (loading) {
-        return console.log("Loading")
+        return <div className='w-full h-screen flex justify-center items-center text-3xl'>
+            <span className="loading loading-spinner text-neutral"></span>
+            <span className="loading loading-spinner text-info"></span>
+            <span className="loading loading-spinner text-success"></span>
+            <span className="loading loading-spinner text-warning"></span>
+            <span className="loading loading-spinner text-error"></span>
+        </div>
     }
     if (user) {
         return children;

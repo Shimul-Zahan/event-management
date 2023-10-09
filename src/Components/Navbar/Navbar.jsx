@@ -2,17 +2,25 @@ import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { MyAuthContext } from '../Context/AuthContext'
 import './style.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
 
     const { user, logOut } = useContext(MyAuthContext);
 
     const logOutUser = () => {
-        logOut().then(res => alert('Log Out')).catch(err => console.log(err))
+        logOut().then(res => {
+            toast.warning('Successfully Logout', {
+                position: "top-right",
+                autoClose: 5000,
+                theme: "light",
+            })
+        }).catch(err => console.log(err))
     }
 
     return (
-        <div className="navbar container py-8 mx-auto">
+        <div className="navbar container py-8 mx-auto z-10 relative">
             <div className="navbar-start">
                 <Link to='/' className="hidden lg:block text-yellow-500 text-3xl">AlgoWebBot</Link>
                 <div className="lg:hidden dropdown">

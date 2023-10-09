@@ -21,24 +21,28 @@ const Login = () => {
         loginWithPassword(email, password)
             .then(res => {
                 e.target.reset();
-                toast.success('Successfully ', {
-                    position: "top-center",
+                toast.success('Successfully Login ', {
+                    position: "top-right",
                     autoClose: 5000,
                     theme: "light",
                 })
-                // {
-                //     location?.state ? navigate(location.state) : navigate('/');
-                // }
+                {
+                    location?.state ? navigate(location.state) : navigate('/');
+                }
             })
             .catch(err => setError(err.message.slice(10, 100)))
     }
     const LogInByGoogle = () => {
-        googleLogin().then(res => 
+        googleLogin().then(res => {
             toast.success('Successfully Login', {
-                position: "top-center",
+                position: "top-right",
                 autoClose: 5000,
                 theme: "light",
-            }))
+            })
+            {
+                location?.state ? navigate(location.state) : navigate('/');
+            }
+        })
             .catch(err => setError(err.message.slice(10, 100)));
     }
 

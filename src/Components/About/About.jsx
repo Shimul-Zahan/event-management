@@ -25,7 +25,7 @@ const About = () => {
     return (
         <div className=''>
             <div className='min-h-screen lg:-mt-[130px] -mt-[118px] bg-black bg-blend-overlay bg-fixed bg-opacity-90' style={{ backgroundImage: `url('${ParallaxImage}')`, backgroundSize: 'cover' }} >
-                <div className='flex flex-col justify-center items-center min-h-[950px] space-y-5 px-4'>
+                <div className='flex flex-col justify-center items-center min-h-[950px] space-y-5 px-4 -z-10' data-aos="fade-up-right">
                     <div className='text-2xl lg:text-5xl text-white font-bold'>About Us</div>
                     <h1 className='text-xl lg:text-3xl font-bold text-center text-yellow-500'>Our Motto: Unleashing Innovation and Gaming Excitement</h1>
                     <p className='text-white text-base lg:text-lg font-thin max-w-[950px] text-center'>Welcome to <strong className='text-yellow-500'>AlgoWebBot</strong>, where technology meets gaming in extraordinary experiences. As the CEO, I take pride in leading a team dedicated to curating unparalleled events. From cutting-edge Tech Conferences to heart-pounding Gaming Conventions, we redefine the intersection of innovation and excitement. Our vision goes beyond events; it's about building a community that thrives on shared passion and collaboration. Join us on this thrilling journey as we push the boundaries of technology and gaming, creating moments that resonate in the hearts of enthusiasts and industry leaders alike. Welcome to a future where every event is an adventure, and every gathering is a celebration of limitless possibilities.</p>

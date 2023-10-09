@@ -16,7 +16,7 @@ const EventDetails = () => {
                 <div className='relative'>
                     <img src={clickeEvent?.image} alt="" className='lg:h-[600px] w-full' />
                 </div>
-                <p className='text-xl mt-5 font-medium'>{clickeEvent?.long_description}</p>
+                <p className='text-base font-thin md:text-xl mt-5 md:font-medium'>{clickeEvent?.long_description}</p>
                 <div>
                     <div className='mt-10'>
                         <h1 className='text-xl font-bold mb-3'>Your Same Packages</h1>
@@ -34,8 +34,8 @@ const EventDetails = () => {
                                     </div>
                                     <div className="space-y-4 px-2 mb-2">
                                         <div className='flex justify-between gap-2'>
-                                            <h2 className="text-xl font-thin mt-4">{item?.title}</h2>
-                                            <h2 className="text-xl font-thin mt-4">${item?.price}</h2>
+                                            <h2 className="text-lg md:text-xl font-thin mt-4">{item?.title}</h2>
+                                            <h2 className="text-base md:text-xl font-thin mt-4">${item?.price}</h2>
                                         </div>
                                         {/* <p className='text-base font-medium'>{item?.description}</p> */}
                                     </div>
@@ -49,12 +49,12 @@ const EventDetails = () => {
             <div className='bg-base-100'>
                 <div>
                     <div className='flex justify-between mb-10'>
-                        <h1 className='text-3xl font-bold py-4 w-full'>{clickeEvent?.title}</h1>
+                        <h1 className='text-xl md:text-2xl lg:text-3xl font-bold py-4 w-full'>{clickeEvent?.title}</h1>
                         <h1 className='text-2xl font-bold text-right text-yellow-500 py-4 w-full'>${clickeEvent?.price}</h1>
                     </div>
-                    <h1 className='text-xl font-bold mb-5'>Our Main Focus On Your Event</h1>
+                    <h1 className='text-lg md:text-xl font-bold mb-5'>Our Main Focus On Your Event</h1>
                     {
-                        clickeEvent.focus.map(item => <h1 className='text-xl font-bold mb-3'><span className='text-green-400 mr-2'>►</span>{item}</h1>)
+                        clickeEvent.focus.map(item => <h1 className='text-base md:text-xl font-bold mb-3'><span className='text-green-400 mr-2'>►</span>{item}</h1>)
                     }
                 </div>
                 <div>

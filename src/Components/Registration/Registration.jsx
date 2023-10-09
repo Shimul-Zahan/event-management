@@ -39,11 +39,12 @@ const Registration = () => {
         createUser(email, password).then(res => {
             const user = res.user;
             toast.success('Successfully create account', {
-                position: "top-center",
+                position: "top-right",
                 autoClose: 5000,
                 theme: "light",
             })
             e.target.reset();
+            navigate('/')
             {
                 location?.state ? navigate(location.state) : navigate('/');
             }
@@ -52,17 +53,19 @@ const Registration = () => {
                 displayName: userName
             }).then(res)
                 .catch(err => setError(err.message.slice(10, 100))
-            )
+                )
 
         }).catch(err => setError(err.message.slice(10, 100)))
     }
     const createAccountWithGoogle = () => {
-        googleLogin().then(res => 
+        googleLogin().then(res => {
             toast.success('Successfully create account', {
-                position: "top-center",
+                position: "top-right",
                 autoClose: 5000,
                 theme: "light",
-            }))
+            })
+            navigate('/');
+        })
             .catch(err => console.log(err));
     }
 

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const LatestDeal = () => {
     return (
@@ -23,7 +24,9 @@ const LatestDeal = () => {
                     
                     <div className='flex justify-center items-center gap-10'>
                         <h1 className='text-xl lg:text-3xl font-bold text-yellow-500'>33% DISCOUNT</h1>
-                        <button className='btn bg-yellow-500 text-lg font-thin hover:bg-yellow-500'>🎉 Make a Deal</button>
+                        <Link to='/contact'>
+                            <button className='btn bg-yellow-500 text-lg font-thin hover:bg-yellow-500'>🎉 Make a Deal</button>
+                        </Link>
                     </div>
                 </div>
             </div>
