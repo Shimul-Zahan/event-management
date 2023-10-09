@@ -53,7 +53,7 @@ const Navbar = () => {
                         </div>
                     </label>
                     <ul tabIndex={0} className="menu lg:hidden menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><Link>{ user ? user.displayName : '' }</Link></li>
+                        <li><Link to='#'>{ user ? user.displayName : '' }</Link></li>
                         {
                             user ?
                             <li onClick={logOutUser}><Link>Logout</Link></li>:
