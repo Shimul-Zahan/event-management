@@ -109,7 +109,7 @@ const About = () => {
             <div className='flex justify-center items-center' data-aos="fade-up-right">
                 <div className='grid grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-24'>
                     <div className='flex flex-col justify-center items-center mb-20'>
-                        <img src="/public/Images/best-seller-158885_640.png" className='h-72 w-80' />
+                        <img src="/Images/best-seller-158885_640.png" className='h-72 w-80' />
                         <h1 className='text-2xl font-bold mt-4'>Best Seller</h1>
                     </div>
                     <div className='flex flex-col justify-center items-center mb-20'>
