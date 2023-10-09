@@ -22,12 +22,12 @@ const FactsFigures = () => {
                     <h1 className='ttext-xl md:ext-3xl font-thin text-gray-700'>Branch</h1>
                 </div>
                 <div className='flex justify-center items-center flex-col space-y-4'>
-                    <img src="/public/icon/rocket.png" className='h-28 w-28' />
+                    <img src="/icon/rocket.png" className='h-28 w-28' />
                     <p className='text-3xl md:text-7xl font-thin text-gray-400'>66799</p>
                     <h1 className='text-xl md:text-3xl font-thin text-gray-700'>Total Projects</h1>
                 </div>
                 <div className='flex justify-center items-center flex-col space-y-4'>
-                    <img src="/public/icon/good-feedback.png" className='h-28 w-28' />
+                    <img src="/icon/good-feedback.png" className='h-28 w-28' />
                     <p className='text-3xl md:text-7xl font-thin text-gray-400'>66776</p>
                     <h1 className='text-xl md:text-3xl font-thin text-gray-700'>Successfull Projects</h1>
                 </div>
