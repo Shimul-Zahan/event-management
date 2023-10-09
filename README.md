@@ -9,3 +9,5 @@
 * You can see a latest deal section 
 * Fully respon sive of all device laptop, mobile and tablet  
 * User can feel cool UI experience with a smooth page scroll animation
+
+# Live link: https://event-management-7180b.web.app/
